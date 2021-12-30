@@ -1,0 +1,361 @@
+INTEGERS && FLOATS:
+
+Floor for dividing = 5 \\ 2 -> 2
+
+Power = 3 ** 2 = 9 
+
+To turn negative into a positive = abs(number_here)
+
+round  = round(number_here)
+round  = round (3.85, 1) = 3.9 -> we specified “1” since we want to only include the 1st digit after the decimal. 
+
+STRINGS:
+Three quotation marks will follow the order of the string = “””Code goes here”””
+
+
+string  = “this is eidmone”
+
+string.count(“s”) = this will count the number of “s” in the string 
+
+string.find(“word_to_find”) == this will return the starting idx of the word or if its NA then -1
+
+
+Concatenation:
+
+Name = “eidmone”
+age  = “19”
+
+version1  = “Hello my name is” + Name + “and I am “ + age
+
+Version2 = “Hello my name is {}, and I am {}”.format(Name, age)
+
+Version3 = f”Hello my name is {Name} and I am {age}”
+
+ARRAYS: 
+
+Ranging arrays || slicing:
+array  = [1, 2, 3, 4, 5]
+
+FInding the length of a sub array
+size
+
+Array[0:3] == 1, 2 , 3 
+Array[1:] == 2, 3, 4, 5 
+To make a 2d lists into one array = myArray.flatten()
+
+
+
+Prefill and array:
+v1 : new_ array = [ (number || string)for _ in array]
+v2 : new_array = [0 for in range(5)]
+V3 = [0] * 5
+
+==This will all result to be the same==œxq
+
+Ex:
+This will fill the new array with 0’s 
+myArray = [0 for _ in parentArray]
+
+
+
+To remove: 
+
+array.remove (“word_here”)
+array.pop()
+
+
+Sorting:
+
+Ascending sort => array.sort()
+descending sort => array.sort(reverse=True) 
+
+Ascending but not in place => sorted(myArray) or this will be a copy of the original lists
+
+Array builtins:
+
+You can join arrays to a string by => ‘, ‘.join(myArray)
+
+You can split strings by and turn them into an array by:
+
+newVar = myString.split(“ ”) <- inside this parenthesis you can specify where it should be splitted
+
+
+min(myArray) => gets the min of the array
+max(myArray) => gets the max of the array
+
+min(2, 1) => just compares it an returns the minimum num
+max(2, 1) => compares it an returns the max num
+
+Getting the idx of a value in the array => myArray.index(“toFind”)
+Getting the idx of a value in a string => myString.find(“toFind”)
+
+
+
+
+
+
+
+FOR BREAKING THE PAIRS IN A SUBARRAY:
+my2 = [[1,2], [3, 4], [5, 6]]
+
+VERSION 1:
+
+For val in my2:
+Val1, val2 = val
+VERSION 3:
+
+For val1, val2 in myArray:
+	print(val1, val2)
+
+VERSION 2:
+
+For i, val in enumerate(my2):
+Val1, val2 = val
+print (val1, val2) 
+
+IF YOU WANTED TO SPECIFY A START POINT FOR ENUMERATE:
+
+For i, val in enumerate(my2, start = 1):
+	Val1, val2 = val
+	#this will start at the idx 1 
+
+IF YOU WANTED TO HAVE A STARTING FOR THE “FOR IN” LOOP 
+
+For i in myArray[1:]:
+	print(i)
+
+For specifying an end:
+
+For i in myArray[:3]
+	print (i)
+
+LOOPING:
+For i in range(len(array)): 
+	#code here
+
+Reverse loop:
+
+For i in reversed(range(len(array))): 
+	#code here
+
+If reversed(range(startIDX, endIDX)) ->>> range(endIDX, startIDX) = this will also reverse start and end
+
+
+SETS:
+
+SETS -> they basically act like arrays and tuples but they only store one quantity value at a time. They see if that value is stored in the set.  The arrangement can also change. 
+
+
+mySet = set() -> initializing an empty set
+
+syntax: 
+
+Sets can be an int or strings
+mySet = {1, 2, 3, 4}
+
+mySet = {'cmps1', 'cmps2', 'hist', 'art'}
+
+
+mySet1.intersection(mySet2) -> check intersection of 2 sets
+
+mySet1.difference(mySet2) -> check what are not available for mySet2 that are in mySet1
+
+mySet1.union(mySet2) -> combine set 1 and set 2
+
+
+break ->breaks out of the oop entirely
+Continue ->skips the current iteration
+
+
+DICTIONARIES:
+
+
+ACCESSING:
+
+dic = {
+ "name" : "john",
+ "age" : 25,
+ "race" : "asian"
+}
+
+dic[‘name’] || dic.get(‘name’) || dic.get(‘nonExistent’, ‘default_result’)
+
+
+
+UPDATING VALUES:
+
+dic[‘keyHere’] = updated_value
+
+To update or add  a lot of values in one shot
+
+dic.update({
+	‘name’  : jack,
+	‘Age’ : 11
+})
+
+DELETING IN DICS:
+
+#You will not be able to assign this to a variable
+Del dic[‘key_to_be_deleted’]
+
+
+#you can assign this to a variable
+dic .pop(‘key_to_be_deleted’)
+
+GETTING THE LENGTH OF THE DICTIONARY
+
+len(dic) 
+
+
+
+dic.keys() -> show all the keys of the dictionary
+dic.values() ->show all the values of the dictionary
+
+dic.items() -> shows the pair for the dictionary
+
+Looping through values and keys
+
+For key, value in dic.items():
+	print(key, value)
+
+
+
+TO STORE OR GET THE VALUES || KEYS
+
+#This will loop through over the keys
+For keys in dic:
+	print(dic)
+
+#This will loop through over the dic.values and therefore we will only be printing the values
+For values in dic.values():
+	print(values) 
+
+#This will get the key and the value because of the ‘dic.items()’
+for key, value in dic.items() 
+	print(key, value)
+
+
+CONDITIONAL STATEMENTS:
+
+operators:
+Not = ! operator
+
+Is -> checks if its the same object or variable
+
+isWhat = True
+
+False values are:
+
+{}
+[] 
+The number ‘0’
+False
+None
+‘’ ->empty string
+
+#if you have an if statement
+
+if isWhat:
+	#this code will execute
+Else:
+	#this code will not execute
+
+isWhat = False
+
+if not isWhat: -> meaning this is true
+	#this code will execute
+
+else :
+	#this code will not execute
+
+
+FUNCTIONS:
+
+syntax: 
+
+Def name_of_function():
+	#code here
+
+Building an empty function
+
+Def name_of_function():
+	pass ->pass allows you to build empty functions 
+
+
+#you can also chain things with functions 
+ex1 
+
+name_of_function().upper()
+
+Passing parameters -> def myFunction(a, b=”this is default” ):
+
+
+ARGS and KWARGS:
+
+Def myFunctions(*args, **kwargs):
+	#print(args) -> 1, 2 -> they are positional arguments
+	#print(kwargs) -> dic -> { ‘name’ : ‘eidmone’, ‘age’ : 19} ->this will be a dictionary
+
+myfunction(1, 2, name=’eidmone’, age=19)
+
+
+ 
+ 
+def info(*args, **kwargs):
+ #args will be tuples or lists/arrays
+ print(args)
+ #kwargs will be dictionaries
+ print(kwargs)
+name = ['eidmone', 'start']
+ 
+age = {
+ 'age' : 19,
+ 'job' : 'unemployed'
+}
+ 
+ 
+info(*name, **age)
+
+
+#the asterisk on the function call are there to unpack the values of name and age
+
+
+IMPORTING:
+
+Import fileName -> importing just your module
+Import fileName as myFile -> importing your module but just renaming it
+
+From fileName import, myFunc, myVar, myClass -> you can also name them with aliases
+
+From fileName import * -> asterisk stands for everything on the module
+
+
+ 
+#import sys
+#sys.path.append('/path/to/your/file')
+
+#Do this when you would need to import a file from your desktop
+
+nano  ~/.bash_profile -> command line for adding a file on your environment
+export PYTHONPATH = ‘/your/file/path’
+
+
+#importing the random lib
+Import random
+
+rndmChoice = random.choice(myArray) -> this will pick out random choices out of your array/lists
+
+Math module
+
+https://www.w3schools.com/python/module_math.asp
+
+Random module
+
+https://www.w3schools.com/python/module_random.asp
+
+Date module
+
+
+
+
+
